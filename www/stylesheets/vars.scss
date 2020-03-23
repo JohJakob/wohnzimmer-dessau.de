@@ -2,6 +2,8 @@ $color__black: #000;
 $color__white: #fff;
 
 $color__salmon: #f58382;
+$color__salmon-dark: darken(saturate($color__salmon, 5%), 10%);
+$color__teal: #8fd3d2;
 
 $font-family__default: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Symbol";
 

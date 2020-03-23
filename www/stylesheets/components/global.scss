@@ -11,3 +11,23 @@ body {
   font-size: 14pt;
   background: $color__white;
 }
+
+main {
+  margin: .75em;
+}
+
+a {
+  color: $color__black
+}
+
+@media (min-width: $breakpoint__desktop) {
+  main {
+    margin: 0;
+
+    section {
+      margin: 0 auto;
+      padding: 0 2em;
+      max-width: $max-width__content;
+    }
+  }
+}
