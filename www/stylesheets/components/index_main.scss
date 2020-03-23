@@ -69,32 +69,6 @@
   }
 }
 
-.section-index-areas, .section-index-phone {
-  position: relative;
-  margin-bottom: 2em;
-  padding: 2em 0;
-  z-index: 1;
-
-  &:before, &:after {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    content: "";
-    background-size: contain;
-    z-index: -1;
-  }
-
-  &:before {
-    background-image: url(/images/paper_background.jpg)
-  }
-
-  &:after {
-    mix-blend-mode: multiply
-  }
-}
-
 .section-index-areas {
   &:before, &:after {
     transform: skewY(-2deg);
@@ -173,6 +147,16 @@
   }
 }
 
+.section-index-contact {
+  &:before, &:after {
+    transform: skewY(-2deg)
+  }
+
+  &:after {
+    background: $color__teal
+  }
+}
+
 @media (min-width: $breakpoint__desktop) {
   .section-index-illustration {
     margin-top: 2em;
@@ -181,11 +165,6 @@
     ul {
       display: inherit
     }
-  }
-
-  .section-index-areas, .section-index-phone {
-    margin-bottom: 4em;
-    padding: 6em 0
   }
 
   .section-index-areas ul {

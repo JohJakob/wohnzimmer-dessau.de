@@ -1,6 +1,29 @@
 .section-background {
-  margin-left: -.75em;
+  position: relative;
   margin-right: -.75em;
+  margin-bottom: 2em;
+  margin-left: -.75em;
+  padding: 2em 0;
+  z-index: 1;
+
+  &:before, &:after {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    content: "";
+    background-size: contain;
+    z-index: -1;
+  }
+
+  &:before {
+    background-image: url(/images/paper_background.jpg)
+  }
+
+  &:after {
+    mix-blend-mode: multiply
+  }
   
   & > div {
     margin: 0 .75em;
@@ -9,6 +32,8 @@
 
 @media (min-width: $breakpoint__desktop) {
   .section-background {
+    margin-bottom: 4em;
+    padding: 6em 0;
     max-width: none;
 
     & > div {
