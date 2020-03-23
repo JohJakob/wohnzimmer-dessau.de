@@ -2,7 +2,7 @@
   margin-left: -.75em;
   margin-right: -.75em;
   
-  div {
+  & > div {
     margin: 0 .75em;
   }
 }
@@ -11,7 +11,7 @@
   .section-background {
     max-width: none;
 
-    div {
+    & > div {
       margin: 0 auto;
       padding: 0 2em;
       max-width: $max-width__content

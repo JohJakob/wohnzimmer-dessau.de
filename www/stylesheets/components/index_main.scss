@@ -57,7 +57,7 @@
   }
 }
 
-.section-index-areas {
+.section-index-areas, .section-index-phone {
   position: relative;
   margin-bottom: 2em;
   padding: 2em 0;
@@ -70,19 +70,26 @@
     left: 0;
     position: absolute;
     content: "";
-    background-size: cover;
-    transform: skewY(-2deg);
+    background-size: contain;
     z-index: -1;
   }
 
   &:before {
-    background-image: url(/images/paper_background.jpg);
-    background-size: contain
+    background-image: url(/images/paper_background.jpg)
   }
 
   &:after {
-    background-color: $color__teal;
-    mix-blend-mode: multiply;
+    mix-blend-mode: multiply
+  }
+}
+
+.section-index-areas {
+  &:before, &:after {
+    transform: skewY(-2deg);
+  }
+
+  &:after {
+    background: $color__teal
   }
 
   ul {
@@ -111,7 +118,7 @@
 }
 
 .section-index-info {
-  margin-bottom: 2em;
+  margin-bottom: 4em;
 
   ul {
     margin-left: 1.2em;
@@ -128,6 +135,16 @@
   }
 }
 
+.section-index-phone {
+  &:before, &:after {
+    transform: skewY(2deg)
+  }
+
+  &:after {
+    background: $color__salmon-light
+  }
+}
+
 @media (min-width: $breakpoint__desktop) {
   .section-index-illustration {
     margin-top: 2em;
@@ -138,12 +155,12 @@
     }
   }
 
-  .section-index-areas {
+  .section-index-areas, .section-index-phone {
     margin-bottom: 4em;
-    padding: 6em 0;
+    padding: 6em 0
+  }
 
-    ul {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
+  .section-index-areas ul {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
