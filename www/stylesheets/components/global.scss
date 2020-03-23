@@ -12,7 +12,7 @@ body {
   background: $color__white;
 }
 
-main {
+main, footer {
   margin: .75em;
 }
 
@@ -29,5 +29,11 @@ a {
       padding: 0 2em;
       max-width: $max-width__content;
     }
+  }
+
+  footer {
+    margin: 2em auto;
+    padding: 0 2em;
+    max-width: $max-width__content
   }
 }
