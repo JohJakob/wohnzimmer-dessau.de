@@ -1,3 +1,11 @@
+.section-index {
+  p, li {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto
+  }
+}
+
 .section-index-illustration {
   position: relative;
   margin-top: 1.5em;
