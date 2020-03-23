@@ -104,7 +104,7 @@
     list-style: none;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px 20px;
+    gap: $gap__default;
     justify-items: center;
 
     li {
@@ -151,6 +151,13 @@
   &:after {
     background: $color__salmon-light
   }
+
+  h3 {
+    margin-bottom: 1em;
+    padding: .5em;
+    font-weight: 600;
+    background: $color__salmon
+  }
 }
 
 @media (min-width: $breakpoint__desktop) {
@@ -170,5 +177,31 @@
 
   .section-index-areas ul {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .section-index-phone > div > div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: $gap__default;
+
+    & > div {
+      p {
+        padding: 0 .5em
+      }
+
+      &:first-child {
+        grid-area: 1 / 1 / last-line / 2;
+
+        p {
+          padding: 0
+        }
+      }
+
+      &:last-child {
+        grid-area: 2 / 2 / last-line / 4
+      }
+    }
   }
 }
