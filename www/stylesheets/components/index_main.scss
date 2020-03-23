@@ -4,6 +4,10 @@
     -webkit-hyphens: auto;
     -moz-hyphens: auto
   }
+
+  p {
+    max-width: $max-width__text
+  }
 }
 
 .section-index-illustration {
@@ -131,6 +135,7 @@
   ul {
     margin-left: 1.2em;
     line-height: 1.5;
+    max-width: $max-width__text;
     list-style: url(/images/list_bullet_index_info.svg);
 
     li {
@@ -157,6 +162,14 @@
     padding: .5em;
     font-weight: 600;
     background: $color__salmon
+  }
+}
+
+.section-index-about {
+  margin-bottom: 2em;
+
+  p {
+    line-height: 1.5
   }
 }
 
