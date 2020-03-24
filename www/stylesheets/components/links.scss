@@ -15,9 +15,8 @@
 
 @media (min-width: $breakpoint__desktop) {
   .a-start-helping {
-    bottom: 0;
-    position: absolute;
-    margin: 0;
+    position: relative;
+    margin: 2em 0;
     padding-left: 0;
     font-size: 1.2em;
 
