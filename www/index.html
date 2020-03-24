@@ -1,15 +1,15 @@
 {{> head}}
-  <title>{{title label='Titel'}}</title>
-  <meta name="description" content="{{description label='Beschreibung'}}">
+  <title>{{index_title label='Startseite: Titel'}}</title>
+  <meta name="description" content="{{index_description label='Startseite: Beschreibung'}}">
 </head>
 <body>
   {{> nav}}
   <main>
     <section>
-      {{page_info type=html editor=markdown label='Seiteninformationen'}}
+      {{index_page_info type=html editor=markdown label='Startseite: Seiten-Informationen'}}
     </section>
     <section class="section-index section-index-illustration">
-      {{illustration type=image label='Wohnzimmer-Illustration'}}
+      {{illustration type=image label='Startseite: Wohnzimmer-Illustration'}}
       <ul>
         <li><a href="/wohnzimmer">Wohnzimmer</a></li>
         <li><a href="/pinnwand">Pinnwand</a></li>
@@ -80,11 +80,11 @@
         </div>
       </div>
     </section>
-    <section class="section-index section-index-about">
+    <section id="about" class="section-index section-index-about">
       <h2>Über Dessaus digitales Wohnzimmer</h2>
       {{about type=html editor=markdown label='Über Dessaus digitales Wohnzimmer'}}
     </section>
-    <section class="section-background section-index section-index-contact">
+    <section id="contact" class="section-background section-index section-index-contact">
       <div>
         <h2>Ihr wollt uns schreiben? Gern!</h2>
         <p>Feedback, Anregungen und Wünsche sind gerne willkommen!</p>
