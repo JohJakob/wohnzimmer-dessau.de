@@ -1,15 +1,15 @@
 {{> head}}
-  <title>{{index_title label='Startseite: Titel'}}</title>
-  <meta name="description" content="{{index_description label='Startseite: Beschreibung'}}">
+  <title>{{index_title priority=1 label='Startseite: Titel'}}</title>
+  <meta name="description" content="{{index_description priority=2 label='Startseite: Beschreibung'}}">
 </head>
 <body>
   {{> nav}}
   <main>
     <section>
-      {{index_page_info type=html editor=markdown label='Startseite: Seiten-Informationen'}}
+      {{index_page_info type=html editor=markdown priority=3 label='Startseite: Seiten-Informationen'}}
     </section>
     <section class="section-index section-index-illustration">
-      {{illustration type=image label='Startseite: Wohnzimmer-Illustration'}}
+      {{illustration type=image priority=4 label='Startseite: Wohnzimmer-Illustration'}}
       <ul>
         <li><a href="/wohnzimmer">Wohnzimmer</a></li>
         <li><a href="/pinnwand">Pinnwand</a></li>
@@ -51,7 +51,7 @@
     </section>
     <section class="section-index section-index-info">
       <h2>Aktuelle Informa&shy;tionen über COVID-19</h2>
-      {{virus_info type=html editor=markdown label='Aktuelle Informationen über COVID-19'}}
+      {{virus_info type=html editor=markdown priority=5 label='Aktuelle Informationen über COVID-19'}}
     </section>
     <section class="section-background section-index section-index-phone">
       <div>
@@ -82,7 +82,7 @@
     </section>
     <section id="about" class="section-index section-index-about">
       <h2>Über Dessaus digitales Wohnzimmer</h2>
-      {{about type=html editor=markdown label='Über Dessaus digitales Wohnzimmer'}}
+      {{about type=html editor=markdown priority=6 label='Über Dessaus digitales Wohnzimmer'}}
     </section>
     <section id="contact" class="section-background section-index section-index-contact">
       <div>

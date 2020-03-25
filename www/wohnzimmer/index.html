@@ -1,12 +1,12 @@
 {{> head}}
-  <title>{{living_room_title label='Wohnzimmer: Titel'}}</title>
-  <meta name="description" content="{{living_room_description label='Wohnzimmer: Beschreibung'}}">
+  <title>{{living_room_title priority=7 label='Wohnzimmer: Titel'}}</title>
+  <meta name="description" content="{{living_room_description priority=8 label='Wohnzimmer: Beschreibung'}}">
 </head>
 <body>
   {{> nav}}
   <main>
     <section>
-      {{living_room_page_info type=html editor=markdown label='Wohnzimmer: Seiten-Informationen'}}
+      {{living_room_page_info type=html editor=markdown priority=9 label='Wohnzimmer: Seiten-Informationen'}}
       <a class="a-start-helping" href="/helfen">Helfer*in werden</a>
     </section>
     <section class="section-posts">
@@ -20,7 +20,7 @@
         {{/if}}
         {{#unless title}}
           <div class="div-no-posts">
-            <img class="img-no-posts" src="/images/icons/icon-no-posts-living-room.svg" alt="">
+            <img class="img-no-posts" src="/images/icons/icon-no-posts-living_room.svg" alt="">
             {{> no_posts}}
           </div>
         {{/unless}}
