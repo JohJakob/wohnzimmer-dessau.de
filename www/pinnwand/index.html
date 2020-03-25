@@ -19,8 +19,10 @@
           </div>
         {{/if}}
         {{#unless title}}
-          <img class="img-no-posts" src="/images/icons/icon-no-posts-pinboard.svg" alt="">
-          {{> no_posts}}
+          <div class="div-no-posts">
+            <img class="img-no-posts" src="/images/icons/icon-no-posts-pinboard.svg" alt="">
+            {{> no_posts}}
+          </div>
         {{/unless}}
       {{/section}}
     </section>
