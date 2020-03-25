@@ -176,12 +176,12 @@
         }
 
         &:first-child {
-          right: 0;
+          right: 5%;
           bottom: 20%
         }
 
         &:nth-child(2) {
-          top: 10%;
+          top: 7%;
           left: 50%
         }
 
@@ -192,7 +192,7 @@
 
         &:nth-child(4) {
           top: 50%;
-          left: 0
+          left: 5%
         }
       }
     }
