@@ -1,0 +1,21 @@
+{{> head}}
+{{#section helping label='Helfer*in werden'}}
+  <title>{{title label='Titel'}}</title>
+  <meta name="description" content="{{description label='Beschreibung'}}">
+</head>
+<body>
+  {{> nav}}
+  <main>
+    <section class="section-start-helping">
+      <h2>Helfer*in werden</h2>
+      {{content type=html editor=markdown label='Inhalt'}}
+      <div class="div-start-helping-download">
+        <p>Zum PDF-Download</p>
+        <div>
+          <a class="a-start-helping" href="/files/wohnzimmer-dessau-helfen.pdf">Helfer*in werden</a>
+        </div>
+      </div>
+    </section>
+{{/section}}
+  </main>
+  {{> footer}}

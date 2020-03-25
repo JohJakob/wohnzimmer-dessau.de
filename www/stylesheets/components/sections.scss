@@ -30,6 +30,37 @@
   }
 }
 
+.section-start-helping {
+  h2 {
+    margin-bottom: 1em;
+    color: $color__salmon
+  }
+
+  .div-start-helping-download {
+    margin-top: 4em;
+
+    div {
+      display: flex
+    }
+
+    p {
+      color: $color__salmon;
+      font-weight: 600;
+      text-transform: uppercase;
+
+      &:after {
+        content: ":"
+      }
+    }
+
+    a {
+      position: inherit;
+      margin: 0 0 4em 0;
+      padding-left: 1.5em
+    }
+  }
+}
+
 .section-legal {
   * {
     max-width: $max-width__text;
@@ -66,6 +97,41 @@
       margin: 0 auto;
       padding: 0 2em;
       max-width: $max-width__content
+    }
+  }
+
+  .section-start-helping {
+    h2 {
+      margin-bottom: 1em
+    }
+
+    .div-start-helping-download {
+      div {
+        justify-content: center
+      }
+
+      p:after {
+        content: ""
+      }
+
+      a {
+        position: relative;
+        margin: 4em 0;
+  
+        &:before {
+          top: -4em;
+          left: -2em;
+          position: absolute;
+          width: 50%;
+          height: 6em;
+          content: "";
+          background-image: url(/images/arrow_download.svg);
+          background-color: unset;
+          background-size: contain;
+          background-repeat: no-repeat;
+          pointer-events: none;
+        }
+      }
     }
   }
 }
