@@ -15,7 +15,7 @@
           <div class="div-post-pinboard">
             <h3>{{title}}</h3>
             <p>{{date type=date format="%d.%m.%Y" label='Datum'}}</p>
-            {{content type=html editor=markdown label='Inhalt'}}
+            {{content type=html editor=wysiwyg images=true label='Inhalt'}}
           </div>
         {{/if}}
         {{#unless title}}
