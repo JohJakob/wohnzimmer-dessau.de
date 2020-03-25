@@ -1,0 +1,28 @@
+{{> head}}
+  <title>{{pinboard_title label='Pinnwand: Titel'}}</title>
+  <meta name="description" content="{{pinboard_description label='Startseite: Beschreibung'}}">
+</head>
+<body>
+  {{> nav}}
+  <main>
+    <section>
+      {{pinboard_page_info type=html editor=markdown label='Pinnwand: Seiten-Informationen'}}
+      <a class="a-start-helping" href="/helfen">Helfer*in werden</a>
+    </section>
+    <section class="section-posts">
+      {{#section pinboard multiple=true label='Pinnwand'}}
+        {{#if title label='Titel'}}
+          <div class="div-post-pinboard">
+            <h3>{{title}}</h3>
+            <p>{{date type=date format="%d.%m.%Y" label='Datum'}}</p>
+            {{content type=html editor=markdown label='Inhalt'}}
+          </div>
+        {{/if}}
+        {{#unless title}}
+          <img class="img-no-posts" src="/images/icons/icon-no-posts-pinboard.svg" alt="">
+          {{> no_posts}}
+        {{/unless}}
+      {{/section}}
+    </section>
+  </main>
+  {{> footer}}
