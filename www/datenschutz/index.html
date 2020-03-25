@@ -5,9 +5,9 @@
 <body>
   {{> nav}}
   <main>
-    <section>
-      <h2>Datenschutzerklärung</h2>
-      {{#section privacy label='Datenschutzerklärung'}}
+    <section class="section-legal">
+      <h2>Daten&shy;schutz&shy;erklärung</h2>
+      {{#section privacy limit=1 label='Datenschutzerklärung'}}
         {{content type=html editor=markdown label='Inhalt'}}
       {{/section}}
     </section>

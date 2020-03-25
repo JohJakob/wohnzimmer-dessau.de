@@ -30,6 +30,32 @@
   }
 }
 
+.section-legal {
+  * {
+    max-width: $max-width__text;
+  }
+
+  h3, h4 {
+    margin-bottom: .5em;
+    font-weight: 600;
+    text-transform: none;
+  }
+
+  p, ul {
+    hyphens: none;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto
+  }
+
+  a {
+    text-decoration: underline
+  }
+
+  ul {
+    margin: 0 0 1em 1.5em;
+  }
+}
+
 @media (min-width: $breakpoint__desktop) {
   .section-background {
     margin-bottom: 4em;
