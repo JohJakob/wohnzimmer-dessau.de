@@ -30,6 +30,16 @@
   }
 }
 
+.section-background-teal:after {
+  background: $color__teal
+}
+
+.section-background-slanted-left {
+  &:before, &:after {
+    transform: skewY(-2deg)
+  }
+}
+
 .section-start-helping {
   h2 {
     margin-bottom: 1em;
