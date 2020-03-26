@@ -28,41 +28,53 @@
       a {
         width: 2em;
         height: 2em;
-        color: transparent;
-        font-size: .9em;
-        font-weight: 600;
-        line-height: 10rem;
-        text-align: center;
-        text-transform: uppercase;
+        color: $color__white;
         background: rgba($color__black, .5);
         border-radius: 50%;
-        display: block
+        display: block;
+        overflow: hidden;
+
+        p {
+          margin: 0;
+          font-size: .8em;
+          max-width: 250px;
+          display: none;
+
+          &:first-child {
+            margin-bottom: .2em;
+            font-size: 1em;
+            font-weight: 600;
+            text-transform: uppercase
+          }
+        }
       }
       
       &:first-child {
         right: 10%;
-        bottom: 40%
+        bottom: 20%
       }
 
       &:nth-child(2) {
-        top: 10%;
+        bottom: 70%;
         left: 50%
       }
 
       &:nth-child(3) {
-        bottom: 30%;
-        left: 40%
+        top: 80%;
+        right: 40%
       }
 
       &:nth-child(4) {
-        top: 40%;
-        left: 5%
+        top: 50%;
+        right: 80%
       }
     }
   }
 }
 
 .section-index-areas {
+  margin-top: 2em;
+
   &:before, &:after {
     transform: skewY(-2deg);
   }
@@ -159,40 +171,72 @@
       display: inherit;
 
       li {
-        a {
-          width: 10rem;
-          height: 10rem;
-          background: transparent;
-          border: 4px solid $color__black;
-          transform: scale(.5);
-          transition: color .15s ease, background .15s ease, border .15s ease, transform .15s ease;
+        &:after {
+          position: absolute;
+          width: 32px;
+          height: 32px;
+          background-image: url(/images/arrow_label.svg);
+          background-size: contain;
+          opacity: .5;
+          content: "";
+        }
 
-          &:hover {
-            color: $color__white;
-            background: rgba($color__black, .5);
-            border: none;
-            transform: scale(1)
+        &:hover a p {
+          display: inherit
+        }
+
+        a {
+          position: relative;
+          padding: 1.5em;
+          width: auto;
+          height: auto;
+          border-radius: 0;
+          display: block;
+          overflow: visible;
+
+          p {
+            display: none;
+
+            &:first-child {
+              display: inherit
+            }
           }
         }
 
         &:first-child {
-          right: 5%;
-          bottom: 20%
+          right: 20%;
+          bottom: 40%;
+
+          &:after {
+            right: 0;
+          }
         }
 
         &:nth-child(2) {
-          top: 7%;
-          left: 50%
+          bottom: 80%;
+          left: 55%
         }
 
         &:nth-child(3) {
-          bottom: 0;
-          left: 40%
+          top: 90%;
+          right: 50%;
+
+          &:after {
+            top: -2rem;
+            right: 0;
+            transform: scaleY(-1)
+          }
         }
 
         &:nth-child(4) {
-          top: 50%;
-          left: 5%
+          top: 60%;
+          right: 75%;
+
+          &:after {
+            top: -2rem;
+            right: 0;
+            transform: scaleY(-1)
+          }
         }
       }
     }
