@@ -30,6 +30,16 @@
   }
 }
 
+.section-background-salmon-light {
+  &:after {
+    background: $color__salmon-light
+  }
+
+  .p-statement {
+    color: $color__salmon-light
+  }
+}
+
 .section-background-teal {
   &:after {
     background: $color__teal
@@ -46,6 +56,12 @@
   }
 }
 
+.section-background-slanted-right {
+  &:before, &:after {
+    transform: skewY(2deg)
+  }
+}
+
 .section-start-helping {
   h2 {
     margin-bottom: 1em;
@@ -55,25 +71,55 @@
   .div-start-helping-download {
     margin-top: 4em;
 
-    div {
-      display: flex
-    }
-
-    p {
-      color: $color__salmon;
-      font-weight: 600;
-      text-transform: uppercase;
-
-      &:after {
-        content: ":"
-      }
-    }
-
     a {
       position: inherit;
       margin: 0 0 4em 0;
       padding-left: 1.5em
     }
+  }
+}
+
+.section-virus-info {
+  margin-bottom: 4em;
+
+  p, li {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto
+  }
+
+  p {
+    max-width: $max-width__text
+  }
+
+  ul {
+    margin-left: 1.2em;
+    line-height: 1.5;
+    max-width: $max-width__text;
+    list-style: url(/images/list_bullet_index_info.svg);
+
+    li {
+      margin-bottom: 1em;
+
+      &:last-child {
+        margin: 0
+      }
+    }
+  }
+}
+
+.section-helping-phone {
+  p {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto
+  }
+
+  h3 {
+    margin-bottom: 1em;
+    padding: .5em;
+    font-weight: 600;
+    background: $color__salmon
   }
 }
 
@@ -122,31 +168,43 @@
     }
 
     .div-start-helping-download {
-      div {
-        justify-content: center
-      }
-
-      p:after {
-        content: ""
-      }
+      display: flex;
+      justify-content: center;
 
       a {
         position: relative;
         margin: 4em 0;
-  
+        max-width: none;
+
         &:before {
-          top: -4em;
-          left: -2em;
-          position: absolute;
-          width: 50%;
-          height: 6em;
-          content: "";
-          background-image: url(/images/arrow_download.svg);
-          background-color: unset;
-          background-size: contain;
-          background-repeat: no-repeat;
-          pointer-events: none;
+          display: none
         }
+      }
+    }
+  }
+
+  .section-helping-phone > div > div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: $gap__default;
+
+    & > div {
+      p {
+        padding: 0 .5em
+      }
+
+      &:first-child {
+        grid-area: 1 / 1 / last-line / 2;
+
+        p {
+          padding: 0
+        }
+      }
+
+      &:last-child {
+        grid-area: 2 / 2 / last-line / 4
       }
     }
   }
