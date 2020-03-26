@@ -23,6 +23,18 @@ em {
   font-style: normal;
 }
 
+.p-statement {
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.5;
+
+  mark {
+    color: inherit;
+    background: $color__white;
+  }
+}
+
 @media (min-width: $breakpoint__desktop) {
   h2 {
     font-size: 2em
