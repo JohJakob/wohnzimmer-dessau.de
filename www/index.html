@@ -1,15 +1,16 @@
 {{> head}}
-  <title>{{index_title priority=1 label='Startseite: Titel'}}</title>
-  <meta name="description" content="{{index_description priority=2 label='Startseite: Beschreibung'}}">
+{{#section index priority=1 label='Startseite'}}
+  <title>{{title priority=1 label='Titel'}}</title>
+  <meta name="description" content="{{description priority=2 label='Beschreibung'}}">
 </head>
 <body>
   {{> nav}}
   <main>
     <section>
-      {{index_page_info type=html editor=markdown priority=3 label='Startseite: Seiten-Informationen'}}
+      {{page_info type=html editor=markdown priority=3 label='Seiten-Informationen'}}
     </section>
     <section class="section-index section-index-illustration">
-      {{illustration type=image priority=4 label='Startseite: Wohnzimmer-Illustration'}}
+      {{illustration type=image priority=4 label='Wohnzimmer-Illustration'}}
       <ul>
         <li>
           <a href="/wohnzimmer">
@@ -43,72 +44,18 @@
         <p>Hier erfahrt ihr, wie ihr in der COVID-19-Phase helfen könnt.</p>
       </a>
     </section>
-    <section class="section-background section-index-areas">
+    <section class="section-background section-background-teal section-background-slanted-left">
       <div>
-        <h2>Hier könnt ihr folgendes tun:</h2>
-        <ul>
-          <li>
-            <a href="/wohnzimmer">
-              <h3>Wohnzimmer</h3>
-              <p>Sich miteinander  verknüpfen, Telefon- und Online-Gaming-Partner finden, gemeinsam Netflix schauen und über Interessen reden.</p>
-            </a>
-          </li>
-          <li>
-            <a href="/pinnwand">
-              <h3>Pinnwand</h3>
-              <p>Herausfinden, was derzeit relevantes in Dessau passiert und wie ihr aktuell Menschen aus Risikogruppen in eurer direkten Nachbarschaft helfen könnt.</p>
-            </a>
-          </li>
-          <li>
-            <a href="/werkstatt">
-              <h3>Werkstatt</h3>
-              <p>Euch gemeinsam die Zeit vertreiben und gemeinsam neue Dinge lernen durch Online-Workshops von Dessauern für Dessauer via Skype, YouTube u.v.m.</p>
-            </a>
-          </li>
-          <li>
-            <a href="/atelier">
-              <h3>Atelier</h3>
-              <p>Hier erfahrt ihr, wie ihr lokale Gewerbetreibende, Künstler usw. unterstützen könnt, die durch COVID-19 ihre Einnahmequellen verloren haben.</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="section-index section-index-info">
-      <h2>Aktuelle Informa&shy;tionen über COVID-19</h2>
-      {{virus_info type=html editor=markdown priority=5 label='Aktuelle Informationen über COVID-19'}}
-    </section>
-    <section class="section-background section-index section-index-phone">
-      <div>
-        <h2>Telefonische Hilfen</h2>
-        <div>
-          <div>
-            <p>Das Coronavirus kann uns in Extremsituationen bringen. Unter diesen Nummern findet ihr Hilfe, wenn ihr sie braucht.</p>
-            <p>Passt auf euch auf!</p>
-          </div>
-          <div>
-            <h3>Telefonseelsorge</h3>
-            <p>
-              0800 1110111 (kostenlos)<br>
-              0800 1110222 (kostenlos)<br>
-              116123 (kostenlos)
-            </p>
-          </div>
-          <div>
-            <h3>Info-Tel. Depressionen</h3>
-            <p>0800 3344533 (kostenlos)</p>
-          </div>
-          <div>
-            <h3>Hilfetelefon „Gewalt gegen Frauen“</h3>
-            <p>0800 0116016 (kostenlos)</p>
-          </div>
-        </div>
+        <p class="p-statement">
+          <mark>{{statement priority=5}}</mark>
+        </p>
       </div>
     </section>
     <section id="about" class="section-index section-index-about">
       <h2>Über Dessaus digitales Wohnzimmer</h2>
       {{about type=html editor=markdown priority=6 label='Über Dessaus digitales Wohnzimmer'}}
     </section>
+{{/section}}
     <section id="contact" class="section-background section-index section-index-contact">
       <div>
         <h2>Ihr wollt uns schreiben? Gern!</h2>
