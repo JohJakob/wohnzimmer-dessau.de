@@ -2,6 +2,7 @@
 {{#section index priority=1 label='Startseite'}}
   <title>{{title priority=1 label='Titel'}}</title>
   <meta name="description" content="{{description priority=2 label='Beschreibung'}}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.6.6/lottie.min.js"></script>
 </head>
 <body>
   {{> nav}}
@@ -10,7 +11,10 @@
       {{page_info type=html editor=markdown priority=3 label='Seiten-Informationen'}}
     </section>
     <section class="section-index section-index-illustration">
-      {{illustration type=image priority=4 label='Wohnzimmer-Illustration'}}
+      <noscript>
+        {{illustration type=image priority=4 label='Wohnzimmer-Illustration'}}
+      </noscript>
+      <div id="div-living-room-animation"></div>
       <ul>
         <li>
           <a href="/wohnzimmer">
@@ -68,4 +72,5 @@
       </div>
     </section>
   </main>
+  <script src="/javascripts/living_room_animation.js"></script>
   {{> footer}}
