@@ -1,16 +1,16 @@
 {{> head}}
-  <title>{{atelier_title priority=16 label='Atelier: Titel'}}</title>
-  <meta name="description" content="{{atelier_description priority=17 label='Atelier: Beschreibung'}}">
+  <title>{{atelier_title priority=10 label='Atelier: Titel'}}</title>
+  <meta name="description" content="{{atelier_description priority=11 label='Atelier: Beschreibung'}}">
 </head>
 <body>
   {{> nav}}
   <main>
     <section>
-      {{atelier_page_info type=html editor=markdown priority=18 label='Atelier: Seiten-Informationen'}}
+      {{atelier_page_info type=html editor=markdown priority=12 label='Atelier: Seiten-Informationen'}}
       <a class="a-start-helping" href="/helfen">Helfer*in werden</a>
     </section>
     <section class="section-posts">
-      {{#section atelier multiple=true label='Atelier'}}
+      {{#section atelier multiple=true priority=4 label='Atelier'}}
         {{#if title label='Titel'}}
           <div class="div-post-atelier">
             <h3>{{title}}</h3>
