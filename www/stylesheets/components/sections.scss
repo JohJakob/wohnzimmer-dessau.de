@@ -63,8 +63,7 @@
 }
 
 .section-start-helping {
-  h2 {
-    margin-bottom: 1em;
+  h1 {
     color: $color__salmon
   }
 
@@ -185,6 +184,13 @@
         }
       }
     }
+  }
+
+  .section-virus-info {
+    background-image: url(/images/illustrations/illustration-about.svg);
+    background-position: bottom right;
+    background-size: 400px;
+    background-repeat: no-repeat;
   }
 
   .section-helping-phone > div > div {
