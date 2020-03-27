@@ -1,0 +1,30 @@
+{{> head}}
+  <title>{{workshop_title priority=13 label='Werkstatt: Titel'}}</title>
+  <meta name="description" content="{{workshop_description priority=14 label='Werkstatt: Beschreibung'}}">
+</head>
+<body>
+  {{> nav}}
+  <main>
+    <section>
+      {{workshop_page_info type=html editor=markdown priority=15 label='Werkstatt: Seiten-Informationen'}}
+      <a class="a-start-helping" href="/helfen">Helfer*in werden</a>
+    </section>
+    <section class="section-posts">
+      {{#section workshop multiple=true label='Werkstatt'}}
+        {{#if title label='Titel'}}
+          <div class="div-post-workshop">
+            <h3>{{title}}</h3>
+            <p>{{date type=date format="%d.%m.%Y" label='Datum'}}</p>
+            {{content type=html editor=markdown label='Inhalt'}}
+          </div>
+        {{/if}}
+        {{#unless title}}
+          <div class="div-no-posts">
+            <img class="img-no-posts" src="/images/icons/icon-no-posts-workshop.svg" alt="">
+            {{> no_posts}}
+          </div>
+        {{/unless}}
+      {{/section}}
+    </section>
+  </main>
+  {{> footer}}

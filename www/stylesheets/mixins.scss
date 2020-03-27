@@ -1,0 +1,3 @@
+@mixin background-tint($tint-color, $image) {
+  background-image: linear-gradient($tint-color, $tint-color), url($image)
+}

@@ -1,0 +1,23 @@
+footer {
+  font-size: .8em;
+
+  ul {
+    line-height: 1;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      margin: 0 .5em .5em 0;
+      padding-right: .5em;
+      border-right: 1px solid $color__black;
+
+      &:last-child {
+        margin: 0;
+        padding: 0;
+        border: none
+      }
+    }
+  }
+}

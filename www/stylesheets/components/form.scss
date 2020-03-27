@@ -1,0 +1,51 @@
+form {
+  max-width: $max-width__text;
+  display: block;
+
+  label, input[type=text] {
+    display: block
+  }
+
+  input, textarea {
+    padding: .5em;
+    font-size: 1em;
+    font-family: $font-family__default;
+    border: none;
+    border-radius: 0;
+    outline: none;
+
+    &:focus {
+      border: 2px solid $color__salmon
+    }
+  }
+
+  label {
+    margin: 1em 0 .25em 0
+  }
+
+  input[type=text] {
+    width: 100%;
+    height: 2rem;
+    font-size: 1em;
+  }
+
+  input[type=submit] {
+    margin-top: 1em;
+    background: rgba($color__white, .5);
+
+    &:active {
+      color: $color__black;
+      background: rgba($color__white, .75)
+    }
+
+    &:focus {
+      border: none
+    }
+  }
+
+  textarea {
+    width: 100%;
+    height: 200px;
+    resize: none
+  }
+}

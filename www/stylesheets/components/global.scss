@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box
+}
+
+body {
+  color: $color__black;
+  font-family: $font-family__default;
+  font-size: 14pt;
+  background: $color__white
+}
+
+main, footer {
+  margin: .75em
+}
+
+a {
+  color: $color__black
+}
+
+@media (min-width: $breakpoint__desktop) {
+  main {
+    margin: 0;
+
+    section {
+      margin: 0 auto;
+      padding: 0 2em;
+      max-width: $max-width__content;
+    }
+  }
+
+  footer {
+    margin: 2em auto;
+    padding: 0 2em;
+    max-width: $max-width__content
+  }
+}

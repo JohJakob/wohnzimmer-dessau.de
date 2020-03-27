@@ -1,0 +1,15 @@
+{{> head}}
+  <title>Wohnzimmer Dessau – Datenschutzerklärung</title>
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  {{> nav}}
+  <main>
+    <section class="section-legal">
+      <h2>Daten&shy;schutz&shy;erklärung</h2>
+      {{#section privacy limit=1 label='Datenschutzerklärung'}}
+        {{content type=html editor=markdown label='Inhalt'}}
+      {{/section}}
+    </section>
+  </main>
+  {{> footer}}
