@@ -2,7 +2,7 @@ module.exports = {
   apps : [{
     name: 'wohnzimmer-dessau',
     script: 'vapid',
-    args: 'start .',
+    args: 'start /home/jroder/html',
 
     autorestart: true,
     watch: false,
