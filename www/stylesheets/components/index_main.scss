@@ -212,6 +212,13 @@
     }
   }
 
+  .section-index-about {
+    background-image: url(/images/illustrations/illustration-about.svg);
+    background-position: bottom 10% right;
+    background-size: 400px;
+    background-repeat: no-repeat
+  }
+
   .section-index-areas ul {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
