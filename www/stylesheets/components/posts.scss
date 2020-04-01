@@ -78,6 +78,18 @@
     border-bottom: 2px solid $color__black
   }
 
+  p {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    word-break: normal;
+
+    a {
+      color: $color__black;
+      font-weight: 600
+    }
+  }
+
   img {
     width: 100%
   }
