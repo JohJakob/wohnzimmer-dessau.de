@@ -1,0 +1,13 @@
+{{> head}}
+  <title>{{coupon_shop_title priority=10 label='Gutscheinshop: Titel'}}</title>
+  <meta name="description" content="{{coupon_shop_description priority=11 label='Gutscheinshop: Beschreibung'}}">
+</head>
+<body>
+  {{> nav}}
+  <main>
+    <section>
+      <h1>Gutscheinshop</h1>
+      {{coupon_shop_info type=html editor=markdown priority=12 required=false label='Gutscheinshop: Seiten-Informationen'}}
+    </section>
+  </main>
+  {{> footer}}
