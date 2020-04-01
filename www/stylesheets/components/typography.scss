@@ -36,6 +36,10 @@ em {
   }
 }
 
+.a-salmon, .a-salmon p {
+  color: $color__salmon
+}
+
 @media (min-width: $breakpoint__desktop) {
   h2 {
     font-size: 2em
