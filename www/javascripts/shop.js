@@ -13,19 +13,24 @@ const categories = [
   "Sonstige"
 ];
 const categoriesForm = document.getElementById("div-shop-categories").getElementsByTagName("form")[0];
+const shopList = document.getElementById("div-shop-list");
 
 populateCategoriesForm(categoriesForm);
+sanitizeCategoryData(shopList);
 
 function populateCategoriesForm(form) {
   const fieldset = form.getElementsByTagName("fieldset")[0];
 
   for (var i = 0; i < categories.length; i++) {
+    var div = document.createElement("div");
     var input = document.createElement("input");
     var label = document.createElement("label");
 
     input.setAttribute("type", "radio");
     input.setAttribute("id", i);
+    input.setAttribute("value", i);
     input.setAttribute("name", "category");
+    input.setAttribute("onclick", "filterCategory(this);");
 
     if (i == 0) {
       input.setAttribute("checked", "");
@@ -34,7 +39,44 @@ function populateCategoriesForm(form) {
     label.innerHTML = categories[i];
     label.setAttribute("for", i);
 
-    fieldset.appendChild(input);
-    fieldset.appendChild(label);
+    div.appendChild(input);
+    div.appendChild(label);
+
+    fieldset.appendChild(div);
+  }
+}
+
+/*
+ * Sanitize categories in data-category attribute output by Vapid
+ */
+function sanitizeCategoryData(list) {
+  const children = list.children;
+
+  for (var i = 0; i < children.length; i++) {
+    var categoryString = children[i].getAttribute("data-category");
+
+    categoryString = categoryString.replace(/'/g, "");
+    categoryString = categoryString.replace(/\//g, ", ");
+    categoryString = categoryString.replace("Cafes", "Cafés");
+
+    children[i].setAttribute("data-category", categoryString);
+  }
+}
+
+function filterCategory(input) {
+  const children = shopList.children;
+
+  for (var i = 0; i < children.length; i++) {
+    if (input.value == 0) {
+      children[i].style.display = "block";
+    } else {
+      const childCategory = children[i].getAttribute("data-category");
+
+      if (input.value == categories.indexOf(childCategory)) {
+        children[i].style.display = "block";
+      } else {
+        children[i].style.display = "none";
+      }
+    }
   }
 }
