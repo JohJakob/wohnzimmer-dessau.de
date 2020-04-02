@@ -6,7 +6,7 @@
   {{> nav}}
   <main>
     <section>
-      <h1>Gutscheinshop</h1>
+      <h1>Gutschein&shy;shop</h1>
       {{coupon_shop_info type=html editor=markdown priority=12 required=false label='Gutscheinshop: Seiten-Informationen'}}
     </section>
     <section class="section-shop">
@@ -15,8 +15,25 @@
           <fieldset></fieldset>
         </form>
       </div>
-      <div class="div-shop-list">
-        
+      <div id="div-shop-list">
+        {{#section gutscheine multiple=true priority=1}}
+          {{#if name type=text priority=1}}
+            <div data-category="{{category type=choice options='Cafés/Restaurants','Bars/Kneipen/Clubs','Kinos/Theater/Unterhaltung','Friseure/Nagelstudios/Kosmetik','Einzelhandel','Tattoo-Studios/Piercer','Reisebüros','Sport','Soziale Einrichtungen','Baustoffhandel','Sonstige'}}">
+              <a href="{{_permalink}}">
+                {{#if image type=image required=false priority=2 label='Bild'}}
+                  {{image}}
+                {{/if}}
+                {{#unless image}}
+                  <img src="https://via.placeholder.com/300" alt="">
+                {{/unless}}
+                <p>{{name}}</p>
+              </a>
+            </div>
+          {{/if}}
+          {{#unless name}}
+            <p>Es gibt leider noch keine Gutscheine.</p>
+          {{/unless}}
+        {{/section}}
       </div>
     </section>
   </main>
