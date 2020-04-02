@@ -1,11 +1,90 @@
 .section-shop {
-  margin-top: 2em
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $gap__default
 }
 
 #div-shop-categories {
   form {
     fieldset {
-      border: none
+      border: none;
+
+      div {
+        padding: .5em 0;
+        display: flex;
+        align-items: center;
+
+        input[type=radio] {
+          padding: 0;
+          width: 16px;
+          height: 16px;
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          border: 2px solid $color__gray;
+          transition: all .2s ease;
+          flex-shrink: 0;
+
+          &:checked {
+            border: 6px solid $color__black
+          }
+        }
+
+        label {
+          margin: 0 0 0 .75em
+        }
+      }
     }
+  }
+}
+
+#div-shop-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: $gap__default * 2;
+
+  div {
+    a {
+      &:hover img:before {
+        opacity: .5
+      }
+
+      img {
+        position: relative;
+        display: block;
+        width: 100%;
+        z-index: -1;
+
+        &:before {
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          position: absolute;
+          background: $color__salmon;
+          opacity: 0;
+          transition: opacity .2s ease;
+          content: "";
+          z-index: 1
+        }
+      }
+
+      p {
+        margin: .5em 0 0 0;
+        text-align: center
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint__desktop) {
+  .section-shop {
+    grid-template-columns: minmax(250px, 300px) auto;
+  }
+
+  #div-shop-list {
+    grid-template-columns: repeat(auto-fit, minmax(auto, 200px));
   }
 }
