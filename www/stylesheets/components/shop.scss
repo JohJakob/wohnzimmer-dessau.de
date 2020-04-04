@@ -29,10 +29,16 @@
           &:checked {
             border: 6px solid $color__black
           }
+
+          &:hover {
+            border-color: $color__black;
+            transform: scale(1.2)
+          }
         }
 
         label {
-          margin: 0 0 0 .75em
+          margin: 0;
+          padding-left: .75em
         }
       }
     }
@@ -45,10 +51,30 @@
   align-items: start;
   gap: $gap__default * 2;
 
-  div {
+  & > div {
     a {
       &:hover img:before {
         opacity: .5
+      }
+
+      div {
+        position: relative;
+
+        &:after {
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          position: absolute;
+          background: $color__salmon;
+          opacity: 0;
+          transition: opacity .2s ease;
+          content: "";
+        }
+
+        &:hover:after {
+          opacity: .5
+        }
       }
 
       img {

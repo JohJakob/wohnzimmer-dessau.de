@@ -22,12 +22,14 @@
           {{#if name type=text priority=1}}
             <div data-category="{{category type=choice options='Cafés/Restaurants','Bars/Kneipen/Clubs','Kinos/Theater/Unterhaltung','Friseure/Nagelstudios/Kosmetik','Einzelhandel','Tattoo-Studios/Piercer','Reisebüros','Sport','Soziale Einrichtungen','Baustoffhandel','Sonstige'}}">
               <a href="{{_permalink}}">
-                {{#if image type=image required=false priority=2 label='Bild'}}
-                  {{image}}
-                {{/if}}
-                {{#unless image}}
-                  <img src="/images/shop_default.svg" alt="">
-                {{/unless}}
+                <div>
+                  {{#if image type=image required=false priority=2 label='Bild'}}
+                    {{image}}
+                  {{/if}}
+                  {{#unless image}}
+                    <img src="/images/shop_default.svg" alt="">
+                  {{/unless}}
+                </div>
                 <p>{{name}}</p>
               </a>
             </div>
