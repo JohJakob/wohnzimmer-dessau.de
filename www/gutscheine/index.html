@@ -7,7 +7,9 @@
   <main>
     <section>
       <h1>Gutschein&shy;shop</h1>
-      {{coupon_shop_info type=html editor=markdown priority=12 required=false label='Gutscheinshop: Seiten-Informationen'}}
+      {{#if coupon_shop_info type=html editor=markdown priority=12 required=false label='Gutscheinshop: Seiten-Informationen'}}
+        {{coupon_shop_info}}
+      {{/if}}
     </section>
     <section class="section-shop">
       <div id="div-shop-categories">
