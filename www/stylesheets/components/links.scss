@@ -25,6 +25,35 @@
   }
 }
 
+.a-button {
+  margin: .5em 0;
+  padding: .5em .7em;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 2px solid $color__black;
+  display: inline-block;
+}
+
+.a-button-salmon {
+  color: $color__white;
+  background: $color__salmon;
+  border: none;
+
+  &:hover {
+    background: $color__salmon-dark
+  }
+}
+
+.a-button-salmon-outline {
+  color: $color__salmon;
+  border-color: $color__salmon;
+
+  &:hover {
+    color: $color__salmon-dark;
+    border-color: $color__salmon-dark
+  }
+}
+
 @media (min-width: $breakpoint__desktop) {
   .a-start-helping {
     position: relative;
