@@ -95,7 +95,10 @@
 
         label {
           margin: 0;
-          padding-left: .75em
+          padding-left: .75em;
+          user-select: none;
+          -webkit-user-select: none;
+          -moz-user-select: none
         }
       }
     }
@@ -210,6 +213,8 @@
       top: 50%;
       left: 50%;
       position: absolute;
+      width: 100%;
+      text-align: center;
       transform: translate(-50%, -50%)
     }
   }

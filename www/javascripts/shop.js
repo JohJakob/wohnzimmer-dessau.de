@@ -65,18 +65,36 @@ function sanitizeCategoryData(list) {
 
 function filterCategory(input) {
   const children = shopList.children;
+  var displayCount = 0;
 
   for (var i = 0; i < children.length; i++) {
     if (input.value == 0) {
       children[i].style.display = "block";
+      displayCount++;
     } else {
       const childCategory = children[i].getAttribute("data-category");
 
       if (input.value == categories.indexOf(childCategory)) {
         children[i].style.display = "block";
+        displayCount++;
       } else {
         children[i].style.display = "none";
       }
     }
+  }
+
+  var noItemsElement = document.getElementById("p-shop-no-items");
+
+  if (noItemsElement != null) {
+    noItemsElement.remove();
+  }
+
+  if (displayCount == 0) {
+    var p = document.createElement("p");
+
+      p.id = "p-shop-no-items";
+      p.innerHTML = "In dieser Kategorie gibt es leider keine Gutscheine."
+
+      shopList.appendChild(p);
   }
 }
