@@ -1,5 +1,5 @@
 .ol-shop-register-process {
-  margin-left: 2em;
+  margin: 0 0 1em 2em;
   max-width: $max-width__text - 100px;
   font-size: 1.5em;
   font-weight: 600;
@@ -16,6 +16,16 @@
 
     a {
       font-weight: 600
+    }
+  }
+}
+
+@media (min-width: $breakpoint__desktop) {
+  .ol-shop-register-process {
+    margin-bottom: 2em;
+
+    & ~ .a-button {
+      margin-left: 3em
     }
   }
 }
