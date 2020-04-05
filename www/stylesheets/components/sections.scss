@@ -30,6 +30,18 @@
   }
 }
 
+.section-background-salmon {
+  color: $color__white;
+
+  &:after {
+    background: $color__salmon
+  }
+
+  .p-statement {
+    color: $color__salmon
+  }
+}
+
 .section-background-salmon-light {
   &:after {
     background: $color__salmon-light
@@ -125,6 +137,49 @@
   }
 }
 
+.section-shop-register {
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+
+  & > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $gap__default;
+  }
+
+  h2 {
+    margin-bottom: .5em
+  }
+
+  a mark {
+    color: $color__salmon;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1.4;
+    background: $color__white
+  }
+}
+
+.section-shop-support {
+  color: $color__white;
+
+  & > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start
+  }
+
+  h3 {
+    margin: 0 3em 1em 0
+  }
+
+  img {
+    width: 100%;
+    max-width: 300px
+  }
+}
+
 .section-legal {
   * {
     max-width: $max-width__text;
@@ -160,6 +215,7 @@
     & > div {
       margin: 0 auto;
       padding: 0 2em;
+      width: 100%;
       max-width: $max-width__content
     }
   }
@@ -209,6 +265,23 @@
       &:last-child {
         grid-area: 2 / 2 / last-line / 4
       }
+    }
+  }
+
+  .section-shop-register {
+    margin-top: 4em;
+
+    & > div {
+      grid-template-columns: 1fr 1fr;
+      gap: $gap__default * 4
+    }
+  }
+
+  .section-shop-support {
+    margin-top: 4em;
+
+    h3 {
+      margin-bottom: 0
     }
   }
 }
