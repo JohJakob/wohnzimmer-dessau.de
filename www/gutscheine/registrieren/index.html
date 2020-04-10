@@ -1,0 +1,47 @@
+{{> head}}
+{{#section register label='Gutscheinshop-Registrierung'}}
+  <title>{{title priority=1 label='Titel'}}</title>
+  <meta name="description" content="{{description priority=2 label='Beschreibung'}}">
+</head>
+<body>
+  {{> nav}}
+  <main>
+    <section>
+      <h1>{{headline priority=3 label='Überschrift'}}</h1>
+      {{page_info type=html editor=markdown priority=4 label='Seiten-Informationen'}}
+    </section>
+    <section class="section-shop-register section-background section-background-salmon section-background-slanted-left">
+      <div>
+        <div>
+          <h2>Ich bin betroffen!</h2>
+          <p>Du brauchst Hilfe von deinen Gästen, um die Corona-Krise zu überstehen?</p>
+          <p>Registriere dich hier und wir nehmen deine Lokalität auf unserer Plattform auf.</p>
+          <a href="#register"><mark>Ich möchte mein Geschäft registrieren</mark></a>
+        </div>
+        <div>
+          <h2>Ich möchte helfen!</h2>
+          <p>Hole dir hier einen Gutschein für dein Lieblingsrestaurant, -café, -theater, -tattoostudio, -museum oder -friseur.</p>
+          <p>Diesen kannst du später in deinem Geschäft einlösen.</p>
+          <a href="/gutscheine"><mark>Zum Gutscheinshop</mark></a>
+        </div>
+      </div>
+    </section>
+    <section id="register">
+      <h2>So einfach bist du auf unserer Plattform als Geschäft mit dabei. Unser Regis&shy;trierungs&shy;prozess:</h2>
+      <ol class="ol-shop-register-process">
+        <li><span>Du meldest dein Geschäft über unser Kontaktformular an.</span></li>
+        <li><span>Du sendest uns dein Logo oder ein Foto an <a href="mailto:hallo@wohnzimmer-dessau.de">hallo@wohnzimmer-dessau.de</a></span></li>
+        <li><span>Innerhalb eines Tages erhältst du eine E-Mail von unserem Partner Atento, der dich nach der Bankverbindung fragt und dir weitere Informationen zum Gutscheinsystem gibt.</span></li>
+        <li><span>Innerhalb eines Tages ist dein Profil auf unserer Plattform und es kann losgehen.</span></li>
+      </ol>
+      <a class="a-button a-button-salmon" href="https://forms.gle/PuBTAmSktgUdQQ5u5">Geschäft anmelden</a>
+    </section>
+    <section class="section-shop-support section-background section-background-teal section-background-slanted-left">
+      <div>
+        <h3>Support:</h3>
+        <a href="https://web.atento.me"><img src="/images/atento_logo.png" alt="Atento"></a>
+      </div>
+    </section>
+  </main>
+{{/section}}
+  {{> footer}}

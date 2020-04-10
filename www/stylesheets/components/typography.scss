@@ -36,6 +36,16 @@ em {
   }
 }
 
+a mark {
+  font-weight: 700;
+  line-height: 1.4;
+  background: $color__white
+}
+
+.a-salmon, .a-salmon p {
+  color: $color__salmon
+}
+
 @media (min-width: $breakpoint__desktop) {
   h2 {
     font-size: 2em

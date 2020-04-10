@@ -1,0 +1,232 @@
+.section-shop {
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $gap__default
+}
+
+#div-shop-categories {
+  input[type=checkbox] {
+    top: 1px;
+    position: relative;
+    margin-right: .5em;
+    width: 16px;
+    height: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &:before, &:after {
+      position: absolute;
+      background: $color__gray;
+      transform-origin: center center;
+      transition: transform .2s ease;
+      content: ""
+    }
+
+    &:before {
+      width: 2px;
+      height: 100%;
+      left: 50%;
+      transform: translateX(-50%)
+    }
+
+    &:after {
+      width: 100%;
+      height: 2px;
+      top: 50%;
+      transform: translateY(-50%)
+    }
+
+    &:checked {
+      &:before {
+        transform: translateX(-50%) rotate(45deg)
+      }
+
+      &:after {
+        transform: translateY(-50%) rotate(45deg)
+      }
+
+      & ~ form {
+        display: block
+      }
+    }
+  }
+
+  & > label {
+    color: $color__gray;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none
+  }
+
+  form {
+    margin-top: 1em;
+    display: none;
+
+    fieldset {
+      border: none;
+
+      div {
+        padding: .5em 0;
+        display: flex;
+        align-items: center;
+
+        input[type=radio] {
+          padding: 0;
+          width: 16px;
+          height: 16px;
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          border: 2px solid $color__gray;
+          transition: all .2s ease;
+          flex-shrink: 0;
+
+          &:checked {
+            border: 6px solid $color__black
+          }
+
+          &:hover {
+            border-color: $color__black;
+            transform: scale(1.2)
+          }
+        }
+
+        label {
+          margin: 0;
+          padding-left: .75em;
+          user-select: none;
+          -webkit-user-select: none;
+          -moz-user-select: none
+        }
+      }
+    }
+  }
+}
+
+#div-shop-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: $gap__default * 2;
+
+  & > div {
+    a {
+      &:hover img:before {
+        opacity: .5
+      }
+
+      div {
+        position: relative;
+
+        &:after {
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          position: absolute;
+          background: $color__salmon;
+          opacity: 0;
+          transition: opacity .2s ease;
+          content: "";
+        }
+
+        &:hover:after {
+          opacity: .5
+        }
+      }
+
+      img {
+        position: relative;
+        display: block;
+        width: 100%;
+        z-index: -1;
+
+        &:before {
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          position: absolute;
+          background: $color__salmon;
+          opacity: 0;
+          transition: opacity .2s ease;
+          content: "";
+          z-index: 1
+        }
+      }
+
+      p {
+        margin: .5em 0 0 0;
+        text-align: center
+      }
+    }
+  }
+}
+
+.section-shop-details {
+  margin: 2em auto 6em auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $gap__default;
+
+  div {
+    &:first-child a {
+      display: none
+    }
+
+    img {
+      margin-bottom: 1em;
+      width: 100%;
+      display: block
+    }
+  }
+}
+
+.div-shop-disclaimer {
+  margin-top: 2em;
+  color: $color__gray
+}
+
+@media (min-width: $breakpoint__desktop) {
+  .section-shop {
+    grid-template-columns: minmax(250px, 300px) auto;
+  }
+
+  #div-shop-categories {
+    input[type=checkbox], & > label {
+      display: none
+    }
+
+    form {
+      margin: 0;
+      display: inherit
+    }
+  }
+
+  #div-shop-list {
+    position: relative;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 200px));
+
+    & > p {
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      transform: translate(-50%, -50%)
+    }
+  }
+
+  .section-shop-details {
+    grid-template-columns: minmax(auto, 350px) 1fr;
+    gap: $gap__default * 2;
+
+    div {
+      &:first-child a {
+        display: inline-block
+      }
+    }
+  }
+}

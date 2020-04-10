@@ -1,0 +1,35 @@
+{{> head}}
+{{#section gutscheine}}
+  <title>Wohnzimmer Dessau &ndash; {{name}} &ndash; Gutscheine</title>
+  <meta name="description" content="Gutscheine für {{name}}">
+</head>
+<body>
+  {{> nav}}
+  <main>
+    <section class="section-shop-details">
+      <div>
+        {{#if image}}
+          {{image}}
+        {{/if}}
+        {{#unless image}}
+          <img src="/images/shop_default.svg" alt="">
+        {{/unless}}
+        <a class="a-button a-button-salmon-outline" href="/gutscheine">Zurück</a>
+      </div>
+      <div>
+        <h1>{{name}}</h1>
+        {{description type=html editor=markdown label='Beschreibung'}}
+        <p>
+          <strong>{{name}}</strong><br>
+          {{address label='Adresse'}}<br>
+          {{location label='PLZ und Ort'}}
+        </p>
+        <a class="a-button a-button-salmon" href="{{link label='Link zu Atento'}}">Zu den Gutscheinen</a>
+{{/section}}
+        <div class="div-shop-disclaimer">
+          {{coupon_shop_disclaimer type=html editor=markdown priority=13 label='Gutscheinshop: Disclaimer'}}
+        </div>
+      </div>
+    </section>
+  </main>
+  {{> footer}}
