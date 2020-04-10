@@ -6,8 +6,54 @@
   {{> nav}}
   <main>
     <section>
-      <h1>Gutscheinshop</h1>
-      {{coupon_shop_info type=html editor=markdown priority=12 required=false label='Gutscheinshop: Seiten-Informationen'}}
+      <h1>Gutschein&shy;shop</h1>
+      {{#if coupon_shop_info type=html editor=markdown priority=12 required=false label='Gutscheinshop: Seiten-Informationen'}}
+        {{coupon_shop_info}}
+      {{/if}}
+    </section>
+    <section class="section-background section-background-teal section-background-slanted-left">
+      <div class="div-grid div-grid-2">
+        <div>
+          <p>Hier könnt ihr Gutscheine für eure Lieblingsorte kaufen.</p>
+          <img class="img-center" src="/images/arrow_coupon_shop.svg" alt="">
+        </div>
+        <div>
+          <p><strong>Ihr seid Gewerbetreibende und wollt euer Gewerbe registrieren?</strong></p>
+          <a href="/gutscheine/registrieren"><mark>Hier geht’s zur Registrierung!</mark></a>
+        </div>
+      </div>
+    </section>
+    <section class="section-shop">
+      <div id="div-shop-categories">
+        <input type="checkbox" id="categories-checkbox">
+        <label for="categories-checkbox">Kategorien anzeigen</label>
+        <form>
+          <fieldset></fieldset>
+        </form>
+      </div>
+      <div id="div-shop-list">
+        {{#section gutscheine multiple=true priority=1}}
+          {{#if name type=text priority=1}}
+            <div data-category="{{category type=choice priority=2 label=Kategorie options='Cafés/Restaurants','Bars/Kneipen/Clubs','Kinos/Theater/Unterhaltung','Friseure/Nagelstudios/Kosmetik','Einzelhandel','Tattoo-Studios/Piercer','Reisebüros','Sport','Soziale Einrichtungen','Baustoffhandel','Sonstige'}}">
+              <a href="{{_permalink}}">
+                <div>
+                  {{#if image type=image required=false priority=3 label='Bild'}}
+                    {{image}}
+                  {{/if}}
+                  {{#unless image}}
+                    <img src="/images/shop_default.svg" alt="">
+                  {{/unless}}
+                </div>
+                <p>{{name}}</p>
+              </a>
+            </div>
+          {{/if}}
+          {{#unless name}}
+            <p>Es gibt leider noch keine Gutscheine.</p>
+          {{/unless}}
+        {{/section}}
+      </div>
     </section>
   </main>
+  <script src="/javascripts/shop.js"></script>
   {{> footer}}

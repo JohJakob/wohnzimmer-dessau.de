@@ -124,6 +124,14 @@
   &:after {
     background: $color__teal
   }
+
+  form {
+    margin-top: 1.5em;
+
+    input, textarea {
+      border: none
+    }
+  }
 }
 
 @media (min-width: $breakpoint__desktop) {
