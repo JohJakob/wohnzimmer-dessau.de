@@ -34,10 +34,10 @@
       <div id="div-shop-list">
         {{#section gutscheine multiple=true priority=1}}
           {{#if name type=text priority=1}}
-            <div data-category="{{category type=choice options='Cafés/Restaurants','Bars/Kneipen/Clubs','Kinos/Theater/Unterhaltung','Friseure/Nagelstudios/Kosmetik','Einzelhandel','Tattoo-Studios/Piercer','Reisebüros','Sport','Soziale Einrichtungen','Baustoffhandel','Sonstige'}}">
+            <div data-category="{{category type=choice priority=2 label=Kategorie options='Cafés/Restaurants','Bars/Kneipen/Clubs','Kinos/Theater/Unterhaltung','Friseure/Nagelstudios/Kosmetik','Einzelhandel','Tattoo-Studios/Piercer','Reisebüros','Sport','Soziale Einrichtungen','Baustoffhandel','Sonstige'}}">
               <a href="{{_permalink}}">
                 <div>
-                  {{#if image type=image required=false priority=2 label='Bild'}}
+                  {{#if image type=image required=false priority=3 label='Bild'}}
                     {{image}}
                   {{/if}}
                   {{#unless image}}
