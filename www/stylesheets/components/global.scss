@@ -20,6 +20,17 @@ a {
   color: $color__black
 }
 
+.div-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $gap__default
+}
+
+.img-center {
+  margin: 0 auto;
+  display: block
+}
+
 @media (min-width: $breakpoint__desktop) {
   main {
     margin: 0;
@@ -35,5 +46,9 @@ a {
     margin: 2em auto;
     padding: 0 2em;
     max-width: $max-width__content
+  }
+
+  .div-grid-2 {
+    grid-template-columns: 1fr 1fr
   }
 }

@@ -37,6 +37,11 @@
     background: $color__salmon
   }
 
+  a mark {
+    color: $color__salmon;
+    font-size: 1.5em
+  }
+
   .p-statement {
     color: $color__salmon
   }
@@ -53,8 +58,15 @@
 }
 
 .section-background-teal {
+  color: $color__white;
+
   &:after {
     background: $color__teal
+  }
+
+  a mark {
+    color: $color__teal;
+    font-size: 1.5em
   }
 
   .p-statement {
@@ -150,14 +162,6 @@
 
   h2 {
     margin-bottom: .5em
-  }
-
-  a mark {
-    color: $color__salmon;
-    font-size: 1.5em;
-    font-weight: 700;
-    line-height: 1.4;
-    background: $color__white
   }
 }
 
