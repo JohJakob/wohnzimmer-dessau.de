@@ -30,6 +30,18 @@ a mark {
   background: $color__white
 }
 
+.h3-mark-salmon {
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  line-height: 1.4;
+  text-transform: none;
+
+  mark {
+    color: $color__white;
+    background: $color__salmon
+  }
+}
+
 .p-statement {
   font-size: 1.5em;
   font-weight: 700;
