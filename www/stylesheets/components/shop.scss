@@ -12,10 +12,10 @@
     margin-right: .5em;
     width: 16px;
     height: 16px;
+    border: none;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    outline: none;
 
     &:before, &:after {
       position: absolute;
