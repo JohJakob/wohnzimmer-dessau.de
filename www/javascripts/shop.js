@@ -9,6 +9,7 @@ const categories = [
   "Reisebüros",
   "Sport",
   "Soziale Einrichtungen",
+  "Freizeitangebote",
   "Baustoffhandel",
   "Sonstige"
 ];
