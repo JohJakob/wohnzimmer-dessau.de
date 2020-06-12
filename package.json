@@ -7,6 +7,6 @@
     "build": "vapid build ."
   },
   "dependencies": {
-    "@vapid/cli": "^0.9.5"
+    "@vapid/cli": "^0.10.0"
   }
 }
